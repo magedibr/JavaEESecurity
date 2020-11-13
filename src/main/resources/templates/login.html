@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org" xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+<meta charset="UTF-8">
+<title>Login Page</title>
+<link rel="stylesheet" type="text/css" media="all"
+href="../static/css/mycss.css" th:href="@{/css/mycss.css}" />
+
+
+</head>
+<body>
+
+<h1>Welcome to the login page of this application!</h1>
+
+<img src="../static/images/imgg.png" th:src="@{/images/imgg.png}" width="100px" height="100px"/>
+<form th:method="post" th:action="@{/Login}">
+
+<!-- section to help the user when the credentials are wrong -->
+<div></div>	
+
+<div th:if="${param.error}">
+<div class="error">
+Invalid User-name or password.
+</div>
+</div>
+
+
+
+
+
+
+
+
+<!-- Section to let the user know that they are logged out.  -->
+
+<div th:if="${param.logout}">
+<div class="error">
+You have been logged out.
+</div>
+</div>
+
+<!-- Get the user name and password -->
+
+Email(User name): <input type="email" name="username"/><br>
+Password: <input type="password" name="password"/><br>
+
+<input type="submit" name="login-submit" value="Login">
+
+</form>
+
+<!-- Let the user log out -->
+
+<p><a href="/" th:href="@{/}">Back to home page</a></p>
+
+
+
+
+</body>
+</html>
