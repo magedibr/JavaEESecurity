@@ -13,7 +13,7 @@ href="../static/css/mycss.css" th:href="@{/css/mycss.css}" />
 <h1>Welcome to the login page of this application!</h1>
 
 <img src="../static/images/imgg.png" th:src="@{/images/imgg.png}" width="100px" height="100px"/>
-<form th:method="post" th:action="@{/Login}">
+<form th:method="post" th:action="@{/login}">
 
 <!-- section to help the user when the credentials are wrong -->
 <div></div>	
@@ -23,10 +23,6 @@ href="../static/css/mycss.css" th:href="@{/css/mycss.css}" />
 Invalid User-name or password.
 </div>
 </div>
-
-
-
-
 
 
 
@@ -44,7 +40,7 @@ You have been logged out.
 Email(User name): <input type="email" name="username"/><br>
 Password: <input type="password" name="password"/><br>
 
-<input type="submit" name="login-submit" value="Login">
+<input type="submit" name="login-submit" value="login">
 
 </form>
 
